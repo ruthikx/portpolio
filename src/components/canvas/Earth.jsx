@@ -12,10 +12,12 @@ const Earth = () => {
   );
 };
 
-const EarthCanvas = () => {
+const EarthCanvas = ({ variant = "contact" }) => {
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" && window.matchMedia("(max-width: 500px)").matches
   );
+  const [shouldRender, setShouldRender] = useState(variant === "hero");
+  const isHero = variant === "hero";
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -39,29 +41,55 @@ const EarthCanvas = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isHero || shouldRender) return;
+
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 1.5) {
+        setShouldRender(true);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isHero, shouldRender]);
+
+  if (!shouldRender) {
+    return <div className='w-full h-full' />;
+  }
+
   return (
     <Canvas
-      shadows
-      frameloop='always'
-      dpr={isMobile ? [1, 1.5] : [1, 2]}
-      gl={{ antialias: !isMobile, powerPreference: "high-performance" }}
+      shadows={!isHero}
+      frameloop={isHero && isMobile ? "demand" : "always"}
+      dpr={isMobile ? 1 : [1, 2]}
+      gl={{ alpha: true, antialias: !isMobile, powerPreference: "high-performance" }}
       camera={{
-        fov: 45,
+        fov: isHero ? 38 : 45,
         near: 0.1,
         far: 200,
-        position: [-4, 3, 6],
+        position: isHero ? [0, 0, 8] : [-4, 3, 6],
       }}
+      onCreated={({ gl }) => {
+        gl.setClearColor(0x000000, 0);
+      }}
+      style={{ background: "transparent" }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          autoRotate
+          autoRotate={!isMobile || !isHero}
           enableZoom={false}
+          enablePan={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
         <Earth />
 
-        <Preload all />
+        {!isHero && <Preload all />}
       </Suspense>
     </Canvas>
   );
