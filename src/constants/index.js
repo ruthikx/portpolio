@@ -19,10 +19,10 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
+  skyrabbit,
+  medimate,
+  crypto, 
 } from "../assets";
 
 export const navLinks = [
@@ -54,7 +54,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "UI/UX Designer",
     icon: creator,
   },
 ];
@@ -116,55 +116,52 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Full-Stack & Mobile Developer",
+    company_name: "SkyRabbit (Featured Project)",
     icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    iconBg: "#fff",
+    date: "2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built a cross-platform mobile app (iOS & Android) from scratch using React Native + Expo, featuring real-time chat, live weather feeds, IoT sensor dashboards, and an embedded AI assistant.",
+      "Architected a Node.js/Express + Firebase backend with MongoDB, designing RESTful APIs that handle concurrent sensor payloads and messaging with sub-300ms response times under load.",
+      "Integrated third-party weather and AI APIs with graceful fallback handling to keep core features functional during upstream outages.",
+      "Managed end-to-end product delivery across web, mobile, and IoT domains independently.",
+    ],
+  },
+  {
+    title: "React.js Developer",
+    company_name: "Stegno + Crypto Web App",
+    icon: tesla,
+    iconBg: "#E6DEDD",
+    date: "2025",
+    points: [
+      "Built a browser-based steganography tool to encode and decode secret messages within images using AES encryption, with zero server-side data storage.",
+      "Designed an intuitive drag-and-drop UI with real-time encode/decode feedback, streamlining the user workflow compared to traditional desktop tools.",
+      "Implemented fully client-side cryptographic operations using React.js for maximum privacy and security.",
     ],
   },
   {
     title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    company_name: "MedReminder App",
+    icon: shopify,
+    iconBg: "#fff",
+    date: "2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed a medication scheduling application with push notification reminders to reduce missed-dose errors for users.",
+      "Implemented local and cloud synchronization via Firebase to ensure reminder persistence across device reinstalls.",
+      "Delivered a seamless cross-platform mobile experience using React Native.",
     ],
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
+    company_name: "E-Book Digital Library",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built a searchable web platform to catalogue and serve digitized versions of old and damaged books using HTML, CSS, and JavaScript.",
+      "Implemented full-text search with keyword highlighting to enhance content accessibility for users.",
+      "Focused on responsive design and clean UI to improve discoverability of archived content.",
     ],
   },
 ];
@@ -172,94 +169,94 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
+      "I thought it was impossible to make a website as beautiful as our product, but Ruthik proved me wrong.",
+    name: "Bhoomi",
     designation: "CFO",
     company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "https://images.pexels.com/photos/30276533/pexels-photo-30276533.jpeg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
+      "I've never met a web developer who truly cares about their clients' success like Ruthik does.",
+    name: "Ranganath",
     designation: "COO",
     company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: "https://images.pexels.com/photos/2382808/pexels-photo-2382808.jpeg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
+      "After Ruthik optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Shambavi",
     designation: "CTO",
     company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image: "https://images.pexels.com/photos/30002394/pexels-photo-30002394.jpeg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "SkyRabbit",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "AI-powered cross-platform mobile app featuring real-time chat, live weather feeds, IoT sensor dashboards, and an embedded AI assistant — built end-to-end for iOS and Android.",
     tags: [
       {
-        name: "react",
+        name: "react-native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "node.js",
         color: "blue-text-gradient",
       },
       {
         name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
+        color: "blue-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: skyrabbit,
+    source_code_link: "https://github.com/ruthikx/skyRabbit.git",
   },
   {
-    name: "Job IT",
+    name: "Stegno + Crypto",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Browser-based tool to encode and decode secret messages inside images using steganography combined with AES encryption, with zero server-side data storage.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
+        name: "aes-encryption",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "javascript",
+        color: "blue-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: crypto,
+    source_code_link: "https://github.com/ruthikx/Stegno-Crypto.gitx",
   },
+  // {
+  //   name: "MedReminder App",
+  //   description:
+  //     "Medication scheduling mobile app with push notification reminders and local and cloud synchronization via Firebase to ensure persistence across device reinstalls.",
+  //   tags: [
+  //     {
+  //       name: "react-native",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "firebase",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "expo",
+  //       color: "blue-text-gradient",
+  //     },
+  //   ],
+  //   image: medimate,
+  //   source_code_link: "https://github.com/ruthikx",
+  // },
 ];
 
 export { services, technologies, experiences, testimonials, projects };

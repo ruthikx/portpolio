@@ -30,6 +30,11 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import crypto from "./crypto.jpg";
+import skyrabbit from "./skyrabbit.png";
+import medimate from "./medimate.png";
+
+
 export {
   logo,
   backend,
@@ -59,4 +64,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  crypto,
+  skyrabbit,
+  medimate,
 };
