@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
+import { EarthCanvas } from './canvas';
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
-      <div className="absolute inset-0 top-[70px] z-0">
-        <ComputersCanvas />
+      <div className="absolute inset-0 top-[50px] z-0">
+        <EarthCanvas />
       </div>
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-10`}>
         <div className="flex flex-col justify-center items-center mt-5">
