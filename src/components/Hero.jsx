@@ -17,7 +17,7 @@ const Hero = () => {
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className="text-[#0077b6]">Ruthik</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>I develop full stack web applications, <br className="sm:block hidden"/>and mobile applications</p> 
-          <a href="resume.pdf" download className='mt-6 inline-block'>
+          <a href="/resume.pdf" download="Ruthik-M-U-Resume.pdf" className='mt-6 inline-block'>
             <button className="absolute top-60 left-30 px-4 py-2 bg-[#0077b6] text-white rounded-md z-20">Download CV</button>
           </a>
           <a href="#contact">
